@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex h-[95svh] min-h-[640px] w-full items-end overflow-hidden bg-midnight md:min-h-[760px]"
+      className="relative flex min-h-[95svh] w-full items-end overflow-hidden bg-midnight md:min-h-[760px]"
     >
       <Image
         src="/images/hero/hero.jpg"

@@ -29,14 +29,14 @@ export function MobileNavigation({ open, onClose, socialLinks }: MobileNavigatio
   return (
     <div
       className={cn(
-        "fixed inset-0 z-50 bg-midnight transition-opacity duration-300 lg:hidden",
+        "fixed inset-0 z-50 flex flex-col bg-midnight transition-opacity duration-300 lg:hidden",
         open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0",
       )}
       role="dialog"
       aria-modal="true"
       aria-label="Site menu"
     >
-      <div className="flex items-center justify-between px-5 py-4">
+      <div className="flex shrink-0 items-center justify-between px-5 py-4">
         <Logo theme="dark" className="text-[0.95rem]" />
         <button
           type="button"
@@ -48,7 +48,7 @@ export function MobileNavigation({ open, onClose, socialLinks }: MobileNavigatio
         </button>
       </div>
 
-      <nav aria-label="Mobile" className="flex flex-col gap-2 px-8 pt-10">
+      <nav aria-label="Mobile" className="flex min-h-0 flex-1 flex-col gap-1 overflow-y-auto px-8 pt-4">
         {navItems.map((item, i) => (
           <a
             key={item.href}
@@ -56,7 +56,7 @@ export function MobileNavigation({ open, onClose, socialLinks }: MobileNavigatio
             onClick={onClose}
             style={{ transitionDelay: open ? `${80 + i * 45}ms` : "0ms" }}
             className={cn(
-              "font-display border-b border-ivory/10 py-4 text-4xl font-medium text-ivory transition-all duration-500",
+              "font-display border-b border-ivory/10 py-3 text-3xl font-medium text-ivory transition-all duration-500",
               open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0",
             )}
           >
@@ -65,7 +65,7 @@ export function MobileNavigation({ open, onClose, socialLinks }: MobileNavigatio
         ))}
       </nav>
 
-      <div className="absolute inset-x-0 bottom-0 flex flex-col gap-6 px-8 pb-10">
+      <div className="flex shrink-0 flex-col gap-6 border-t border-ivory/10 px-8 pb-8 pt-6">
         <Button href="#contact" onClick={onClose} variant="outline-inverse" className="w-full">
           Get In Touch
         </Button>
