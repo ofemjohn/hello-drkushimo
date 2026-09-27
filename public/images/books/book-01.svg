@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1200" viewBox="0 0 800 1200">
+  <defs>
+    <linearGradient id="g-40h6dy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16233A" />
+      <stop offset="100%" stop-color="#16233A" />
+    </linearGradient>
+    <pattern id="g-40h6dy-lines" width="28" height="28" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="28" stroke="#FAF6EF" stroke-opacity="0.05" stroke-width="1" />
+    </pattern>
+  </defs>
+  <rect width="800" height="1200" fill="url(#g-40h6dy)" />
+  <rect width="800" height="1200" fill="url(#g-40h6dy-lines)" />
+  <rect x="0.5" y="0.5" width="799" height="1199" fill="none" stroke="#FAF6EF" stroke-opacity="0.14" />
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="3" fill="#FAF6EF" fill-opacity="0.85" font-weight="600">BOOK ONE</text>
+  <text x="50%" y="636" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="13" letter-spacing="2" fill="#FAF6EF" fill-opacity="0.5">COMING SOON</text>
+</svg>

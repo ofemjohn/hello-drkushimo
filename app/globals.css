@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --color-ivory: #faf6ef;
+  --color-cream: #f1e8d8;
+  --color-navy: #16233a;
+  --color-midnight: #0d1522;
+  --color-gold: #b4924b;
+  --color-stone: #6f6a5e;
+
+  --border-dark-subtle: rgba(22, 35, 58, 0.15);
+  --border-light-subtle: rgba(250, 246, 239, 0.18);
+}
+
+@theme inline {
+  --color-ivory: var(--color-ivory);
+  --color-cream: var(--color-cream);
+  --color-navy: var(--color-navy);
+  --color-midnight: var(--color-midnight);
+  --color-gold: var(--color-gold);
+  --color-stone: var(--color-stone);
+
+  --font-display: var(--font-fraunces), "Fraunces", serif;
+  --font-sans: var(--font-inter), "Inter", sans-serif;
+
+  --animate-fade-up: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fade-in 0.8s ease forwards;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(1.25rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Reveal-on-scroll utility: JS toggles [data-revealed] once IntersectionObserver fires */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-reveal][data-revealed="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+::selection {
+  background: var(--color-navy);
+  color: var(--color-ivory);
+}
+
+/* Thin, editorial focus ring instead of the default browser outline */
+:focus-visible {
+  outline: 1.5px solid var(--color-gold);
+  outline-offset: 3px;
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000">
+  <defs>
+    <linearGradient id="g-gastl0" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16233A" />
+      <stop offset="100%" stop-color="#6F6A5E" />
+    </linearGradient>
+    <pattern id="g-gastl0-lines" width="28" height="28" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="28" stroke="#FAF6EF" stroke-opacity="0.05" stroke-width="1" />
+    </pattern>
+  </defs>
+  <rect width="1500" height="1000" fill="url(#g-gastl0)" />
+  <rect width="1500" height="1000" fill="url(#g-gastl0-lines)" />
+  <rect x="0.5" y="0.5" width="1499" height="999" fill="none" stroke="#FAF6EF" stroke-opacity="0.14" />
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" letter-spacing="6" fill="#FAF6EF" fill-opacity="0.85" font-weight="600">GALLERY</text>
+  <text x="50%" y="568" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="24" letter-spacing="5" fill="#FAF6EF" fill-opacity="0.5">PLACEHOLDER</text>
+</svg>
