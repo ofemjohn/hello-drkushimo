@@ -1,8 +1,8 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, MessageCircle, Phone } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
-import { siteConfig } from "@/data/site";
+import { siteConfig, whatsappHref } from "@/data/site";
 
 export function Contact() {
   const methods = [
@@ -10,7 +10,15 @@ export function Contact() {
       ? { key: "email", label: "Send an Email", href: `mailto:${siteConfig.email}`, icon: Mail }
       : null,
     siteConfig.phone
-      ? { key: "phone", label: "Call Now", href: `tel:${siteConfig.phone}`, icon: Phone }
+      ? { key: "phone", label: "Call Now", href: `tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`, icon: Phone }
+      : null,
+    siteConfig.whatsapp
+      ? {
+          key: "whatsapp",
+          label: "Chat on WhatsApp",
+          href: whatsappHref(siteConfig.whatsapp, "Hi Dr. Kushimo! I'd love to connect."),
+          icon: MessageCircle,
+        }
       : null,
   ].filter((m): m is { key: string; label: string; href: string; icon: typeof Mail } => m !== null);
 
@@ -37,6 +45,8 @@ export function Contact() {
               <Button
                 key={key}
                 href={href}
+                target={key === "whatsapp" ? "_blank" : undefined}
+                rel={key === "whatsapp" ? "noreferrer noopener" : undefined}
                 variant={i === 0 ? "solid" : "outline"}
                 icon={<Icon className="h-4 w-4" strokeWidth={1.5} />}
                 iconPosition="left"
