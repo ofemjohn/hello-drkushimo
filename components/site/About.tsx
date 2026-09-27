@@ -9,8 +9,8 @@ export function About() {
       <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-12 px-5 sm:px-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16 lg:px-12">
         <Reveal className="relative aspect-[4/5] w-full overflow-hidden bg-cream lg:sticky lg:top-28 lg:aspect-[4/5]">
           <Image
-            src="/images/about/portrait.svg"
-            alt="Placeholder — a real portrait of Dr. Kushimo will appear here"
+            src="/images/about/portrait.jpg"
+            alt="Portrait of Dr. Bola Kushimo seated, smiling"
             fill
             sizes="(min-width: 1024px) 38vw, 100vw"
             loading="lazy"

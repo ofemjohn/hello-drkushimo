@@ -10,12 +10,12 @@ export function Hero() {
       className="relative flex h-[95svh] min-h-[640px] w-full items-end overflow-hidden bg-midnight md:min-h-[760px]"
     >
       <Image
-        src="/images/hero/hero.svg"
-        alt="Placeholder — a portrait of Dr. Bola Kushimo will appear here"
+        src="/images/hero/hero.jpg"
+        alt="Dr. Bola Kushimo smiling in academic regalia"
         fill
         priority
         sizes="100vw"
-        className="object-cover"
+        className="object-cover object-top"
       />
       <div
         aria-hidden

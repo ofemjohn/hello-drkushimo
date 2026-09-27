@@ -1,6 +1,3 @@
-// TODO: replace every placeholder with a real photograph from Dr. Kushimo's
-// approved album once it's accessible (the shared iCloud link provided could
-// not be loaded — it requires opening in a browser with JavaScript enabled).
 export type GalleryImage = {
   id: string;
   src: string;
@@ -10,10 +7,46 @@ export type GalleryImage = {
 };
 
 export const galleryImages: GalleryImage[] = [
-  { id: "gallery-01", src: "/images/gallery/gallery-01.svg", alt: "Placeholder — a real photograph of Dr. Kushimo will appear here", width: 1200, height: 1500 },
-  { id: "gallery-02", src: "/images/gallery/gallery-02.svg", alt: "Placeholder — a real photograph of Dr. Kushimo will appear here", width: 1500, height: 1000 },
-  { id: "gallery-03", src: "/images/gallery/gallery-03.svg", alt: "Placeholder — a real photograph of Dr. Kushimo will appear here", width: 1200, height: 1200 },
-  { id: "gallery-04", src: "/images/gallery/gallery-04.svg", alt: "Placeholder — a real photograph of Dr. Kushimo will appear here", width: 1500, height: 1000 },
-  { id: "gallery-05", src: "/images/gallery/gallery-05.svg", alt: "Placeholder — a real photograph of Dr. Kushimo will appear here", width: 1200, height: 1500 },
-  { id: "gallery-06", src: "/images/gallery/gallery-06.svg", alt: "Placeholder — a real photograph of Dr. Kushimo will appear here", width: 1600, height: 1067 },
+  {
+    id: "gallery-01",
+    src: "/images/gallery/gallery-01.jpg",
+    alt: "Dr. Kushimo preaching from the pulpit, microphone in hand",
+    width: 1163,
+    height: 1800,
+  },
+  {
+    id: "gallery-02",
+    src: "/images/gallery/gallery-02.jpg",
+    alt: "Dr. Kushimo and the Vital Health International team at a Free Health Screening outreach",
+    width: 1800,
+    height: 1200,
+  },
+  {
+    id: "gallery-03",
+    src: "/images/gallery/gallery-03.jpg",
+    alt: "Dr. Kushimo warmly greeting community elders during a ministry outreach",
+    width: 1800,
+    height: 1201,
+  },
+  {
+    id: "gallery-04",
+    src: "/images/gallery/gallery-04.jpg",
+    alt: "A packed congregation gathered for a community health and ministry outreach",
+    width: 1800,
+    height: 1200,
+  },
+  {
+    id: "gallery-05",
+    src: "/images/gallery/gallery-05.jpg",
+    alt: "Studio portrait of Dr. Kushimo in a floral gown",
+    width: 1440,
+    height: 1800,
+  },
+  {
+    id: "gallery-06",
+    src: "/images/gallery/gallery-06.jpg",
+    alt: "Dr. Kushimo with the full Vital Health International outreach team",
+    width: 1800,
+    height: 1200,
+  },
 ];

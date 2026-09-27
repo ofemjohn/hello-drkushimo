@@ -1,6 +1,6 @@
-// Dev utility: regenerates the warm ivory/navy/gold placeholder SVGs used
-// across the site until Dr. Kushimo's real photography and book covers are
-// supplied. Run with: node scripts/generate-placeholders.mjs
+// Dev utility: regenerates the warm ivory/navy/gold placeholder SVGs still in
+// use (book covers only — hero/about/gallery now use real photography).
+// Run with: node scripts/generate-placeholders.mjs
 import { writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -39,27 +39,8 @@ function write(relativePath, opts) {
   console.log("wrote", relativePath);
 }
 
-// Hero
-write("images/hero/hero.svg", { width: 1920, height: 1281, label: "Portrait", sub: "PLACEHOLDER — REPLACE WITH REAL PHOTOGRAPHY" });
-
-// About
-write("images/about/portrait.svg", { width: 1200, height: 1500, label: "Dr. Kushimo", sub: "PLACEHOLDER — REPLACE WITH REAL PORTRAIT" });
-
 // Book covers
 write("images/books/book-01.svg", { width: 800, height: 1200, label: "Book One", sub: "COMING SOON" });
 write("images/books/book-02.svg", { width: 800, height: 1200, label: "Book Two", sub: "COMING SOON" });
-
-// Gallery grid — varied orientations
-const gallery = [
-  ["gallery-01", 1200, 1500],
-  ["gallery-02", 1500, 1000],
-  ["gallery-03", 1200, 1200],
-  ["gallery-04", 1500, 1000],
-  ["gallery-05", 1200, 1500],
-  ["gallery-06", 1600, 1067],
-];
-for (const [file, width, height] of gallery) {
-  write(`images/gallery/${file}.svg`, { width, height, label: "Gallery", sub: "PLACEHOLDER" });
-}
 
 console.log("Done.");
