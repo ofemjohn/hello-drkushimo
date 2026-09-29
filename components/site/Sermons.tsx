@@ -1,12 +1,12 @@
-import { Play } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/data/site";
 
-// Note: YouTube channel pages can't be embedded directly in an <iframe> (they
-// send X-Frame-Options: deny). Once a specific sermon video ID is available,
-// swap this card for a proper `<iframe src="https://www.youtube.com/embed/<id>">`.
+// TODO: update featuredVideoId whenever there's a newer sermon to feature —
+// find it in the video's YouTube URL: youtube.com/watch?v=<this-part>.
+const featuredVideoId = "MeTI14jZL5c"; // "Generational Patterns"
+
 export function Sermons() {
   return (
     <section id="sermons" className="scroll-mt-20 bg-cream py-24 sm:py-28 lg:py-32">
@@ -18,19 +18,15 @@ export function Sermons() {
         />
 
         <Reveal delay={100}>
-          <a
-            href={siteConfig.youtube}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="group relative flex aspect-video w-full flex-col items-center justify-center gap-4 overflow-hidden bg-navy text-ivory transition-colors hover:bg-midnight"
-          >
-            <span className="flex h-16 w-16 items-center justify-center rounded-full border border-ivory/40 transition-transform group-hover:scale-110">
-              <Play className="h-6 w-6 translate-x-0.5" fill="currentColor" />
-            </span>
-            <span className="font-sans text-xs font-medium uppercase tracking-[0.25em] text-ivory/80">
-              Bola Kushimo TV on YouTube
-            </span>
-          </a>
+          <div className="aspect-video w-full overflow-hidden bg-navy">
+            <iframe
+              src={`https://www.youtube.com/embed/${featuredVideoId}`}
+              title="Generational Patterns — Dr. Bola Kushimo"
+              className="h-full w-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
           <Button href={siteConfig.youtube} target="_blank" rel="noreferrer noopener" variant="outline" className="mt-6">
             Visit the Channel &rarr;
           </Button>

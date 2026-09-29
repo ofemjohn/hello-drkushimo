@@ -65,12 +65,12 @@ export function SpeakingForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-left" suppressHydrationWarning>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <input name="name" type="text" required placeholder="Your name" className={inputClasses} />
-        <input name="email" type="email" required placeholder="Your email" className={inputClasses} />
+        <input name="name" type="text" required placeholder="Your name" className={inputClasses} suppressHydrationWarning />
+        <input name="email" type="email" required placeholder="Your email" className={inputClasses} suppressHydrationWarning />
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <input name="event" type="text" required placeholder="Event or organization" className={inputClasses} />
-        <input name="date" type="text" placeholder="Preferred date (optional)" className={inputClasses} />
+        <input name="event" type="text" required placeholder="Event or organization" className={inputClasses} suppressHydrationWarning />
+        <input name="date" type="text" placeholder="Preferred date (optional)" className={inputClasses} suppressHydrationWarning />
       </div>
       <textarea
         name="message"
@@ -78,6 +78,7 @@ export function SpeakingForm() {
         rows={4}
         placeholder="Tell us about the event and audience"
         className={inputClasses}
+        suppressHydrationWarning
       />
       <Button
         type="submit"

@@ -8,7 +8,7 @@ export const siteConfig = {
   brand: "Dr. Bola Kushimo",
   descriptor: "Public Health Professional · Speaker · Pastor · Author",
   tagline: "Living the fullness of Christ, and helping others discover it too.",
-  url: "https://www.hellodrkushimo.com", // TODO: confirm production domain
+  url: "https://hello-drkushimo.vercel.app", // TODO: swap for a custom domain once one is chosen
 
   email: "bolakushimo@gmail.com",
   phone: "+1 404 555 0182",

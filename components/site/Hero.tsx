@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Play, CalendarHeart } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { shortBio } from "@/data/about";
+import { heroTagline } from "@/data/about";
 
 export function Hero() {
   return (
@@ -32,8 +32,8 @@ export function Hero() {
             <br />
             Fullness of Christ
           </h1>
-          <p className="max-w-md font-sans text-[0.95rem] leading-relaxed text-ivory/80">
-            {shortBio}
+          <p className="max-w-md font-sans text-lg leading-relaxed text-ivory/85">
+            {heroTagline}
           </p>
           <div className="mt-2 flex flex-wrap items-center gap-4">
             <Button href="#sermons" variant="gold" icon={<Play className="h-3.5 w-3.5" fill="currentColor" />} iconPosition="left">

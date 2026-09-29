@@ -64,6 +64,7 @@ export function NewsletterSignup() {
         required
         placeholder="you@example.com"
         className="w-full max-w-xs border border-navy/20 bg-transparent px-4 py-3 font-sans text-sm text-navy placeholder:text-navy/40 outline-none transition-colors focus:border-gold sm:w-64"
+        suppressHydrationWarning
       />
       <Button
         type="submit"

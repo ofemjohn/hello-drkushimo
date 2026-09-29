@@ -3,6 +3,9 @@ export const missionStatement = [
   `I am passionate about believers discovering their many-sided possibilities in Jesus and living them out with authenticity. I am also committed to seeing this fullness passed on from one generation to the next.`,
 ];
 
+export const heroTagline =
+  "A public health scholar and pastor helping believers discover who they are in Christ — and live like it.";
+
 export const shortBio =
   "Dr. Bola Kushimo is a distinguished public health scholar and leader whose career is marked by academic excellence, visionary leadership, and deep Christian faith. With an impressive background in research, academia, and nonprofit work, she is renowned for her commitment to health equity, mentorship, and empowering women through initiatives like the Anna Foundation. Her professional journey and service roles—spanning multiple continents—exemplify a lifelong dedication to translating knowledge into impactful action and inspiring future leaders.";
 
