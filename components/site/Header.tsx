@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
 import { Button } from "@/components/ui/Button";
@@ -43,9 +44,9 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
-        <a href="#top" aria-label="Dr. Bola Kushimo — back to top">
+        <Link href="/#top" aria-label="Dr. Bola Kushimo — back to top">
           <Logo theme={scrolled ? "light" : "dark"} className="text-[0.95rem] sm:text-base" />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary">
           {navItems.map((item) => (
@@ -84,7 +85,7 @@ export function Header() {
             </ul>
           ) : null}
           <Button
-            href="#contact"
+            href="/#contact"
             variant={scrolled ? "outline" : "outline-inverse"}
             className="px-6 py-2.5 text-[0.65rem]"
           >

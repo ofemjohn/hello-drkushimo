@@ -49,4 +49,18 @@ export const galleryImages: GalleryImage[] = [
     width: 1800,
     height: 1200,
   },
+  {
+    id: "gallery-07",
+    src: "/images/gallery/gallery-07.jpg",
+    alt: "Dr. Kushimo in academic regalia, celebrating her doctorate",
+    width: 1440,
+    height: 1800,
+  },
+  {
+    id: "gallery-08",
+    src: "/images/gallery/gallery-08.jpg",
+    alt: "Dr. Kushimo smiling outdoors with a horse",
+    width: 1350,
+    height: 1800,
+  },
 ];

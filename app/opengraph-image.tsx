@@ -22,7 +22,7 @@ export default function OpengraphImage() {
       >
         <div style={{ display: "flex", alignItems: "baseline", fontFamily: "Georgia, serif" }}>
           <span style={{ fontSize: 64, color: "#FAF6EF" }}>Dr. Bola&nbsp;</span>
-          <span style={{ fontSize: 72, color: "#B4924B", fontStyle: "italic" }}>Kushimo</span>
+          <span style={{ fontSize: 72, color: "#B4924B" }}>Kushimo</span>
         </div>
         <span
           style={{
@@ -34,7 +34,7 @@ export default function OpengraphImage() {
             fontFamily: "Arial, sans-serif",
           }}
         >
-          PUBLIC HEALTH SCHOLAR &middot; PASTOR &middot; AUTHOR
+          PUBLIC HEALTH PROFESSIONAL &middot; SPEAKER &middot; PASTOR &middot; AUTHOR
         </span>
       </div>
     ),

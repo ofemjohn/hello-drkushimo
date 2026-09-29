@@ -66,7 +66,7 @@ export function MobileNavigation({ open, onClose, socialLinks }: MobileNavigatio
       </nav>
 
       <div className="flex shrink-0 flex-col gap-6 border-t border-ivory/10 px-8 pb-8 pt-6">
-        <Button href="#contact" onClick={onClose} variant="outline-inverse" className="w-full">
+        <Button href="/#contact" onClick={onClose} variant="outline-inverse" className="w-full">
           Get In Touch
         </Button>
         {socialLinks.length > 0 ? (

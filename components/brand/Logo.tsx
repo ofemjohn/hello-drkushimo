@@ -9,9 +9,9 @@ type LogoProps = {
 };
 
 /**
- * The Dr. Bola Kushimo wordmark, recreated in type: "Dr. Bola" in the
- * display serif, "Kushimo" italicized, with the descriptor tracked out
- * beneath in the UI sans.
+ * The Dr. Bola Kushimo wordmark, set in Playfair Display (distinct from the
+ * body's Fraunces/Inter), with the descriptor tracked out beneath in the UI
+ * sans. The surname is not italicized, per Dr. Kushimo's request.
  */
 export function Logo({
   theme = "light",
@@ -30,8 +30,8 @@ export function Logo({
         className,
       )}
     >
-      <span className={cn("font-display text-[1.4em] leading-none tracking-tight", ink)}>
-        Dr. Bola <span className="italic font-normal">Kushimo</span>
+      <span className={cn("font-wordmark text-[1.4em] leading-none tracking-tight", ink)}>
+        Dr. Bola Kushimo
       </span>
       {showDescriptor ? (
         <span
@@ -41,7 +41,7 @@ export function Logo({
             descriptorInk,
           )}
         >
-          Faith &amp; Public Health
+          Faith &amp; Leadership
         </span>
       ) : null}
     </span>

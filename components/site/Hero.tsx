@@ -11,7 +11,7 @@ export function Hero() {
     >
       <Image
         src="/images/hero/hero.jpg"
-        alt="Dr. Bola Kushimo smiling in academic regalia"
+        alt="Dr. Bola Kushimo smiling, studio portrait"
         fill
         priority
         sizes="100vw"
@@ -25,7 +25,7 @@ export function Hero() {
       <div className="relative z-10 flex w-full flex-col gap-16 px-5 pb-10 pt-32 sm:px-8 sm:pb-14 lg:px-12 lg:pb-16">
         <div className="flex flex-col items-start gap-6 sm:max-w-2xl">
           <span className="font-sans text-xs font-semibold uppercase tracking-[0.35em] text-gold">
-            Public Health Scholar &middot; Pastor &middot; Author
+            Public Health Professional &middot; Speaker &middot; Pastor &middot; Author
           </span>
           <h1 className="font-display text-5xl font-medium leading-[1.05] text-ivory sm:text-7xl md:text-7xl">
             Living the
@@ -37,7 +37,7 @@ export function Hero() {
           </p>
           <div className="mt-2 flex flex-wrap items-center gap-4">
             <Button href="#sermons" variant="gold" icon={<Play className="h-3.5 w-3.5" fill="currentColor" />} iconPosition="left">
-              Watch the Latest Sermon
+              Watch Dr. Bola Speak
             </Button>
             <Button href="#speaking" variant="outline-inverse" icon={<CalendarHeart className="h-3.5 w-3.5" />} iconPosition="left">
               Book Me to Speak

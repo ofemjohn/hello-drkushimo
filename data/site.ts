@@ -6,7 +6,7 @@
 // Nothing here is invented — empty values are hidden by the components that read them.
 export const siteConfig = {
   brand: "Dr. Bola Kushimo",
-  descriptor: "Public Health Scholar · Pastor · Author",
+  descriptor: "Public Health Professional · Speaker · Pastor · Author",
   tagline: "Living the fullness of Christ, and helping others discover it too.",
   url: "https://www.hellodrkushimo.com", // TODO: confirm production domain
 
@@ -18,6 +18,11 @@ export const siteConfig = {
   youtube: "https://www.youtube.com/@Bolakushimotv",
   instagram: "",
   facebook: "",
+
+  // TODO: set once a form backend (e.g. Web3Forms, Formspree) is chosen —
+  // both forms fall back to a mailto: draft until these are set.
+  speakingFormEndpoint: "",
+  newsletterFormEndpoint: "",
 } as const;
 
 export function whatsappHref(number: string, message?: string) {
@@ -32,10 +37,11 @@ export type NavItem = {
 };
 
 export const navItems: NavItem[] = [
-  { label: "About", href: "#about" },
-  { label: "Sermons", href: "#sermons" },
-  { label: "Publications", href: "#publications" },
-  { label: "Books", href: "#books" },
-  { label: "Speaking", href: "#speaking" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Sermons", href: "/#sermons" },
+  { label: "Publications", href: "/#publications" },
+  { label: "Books", href: "/#books" },
+  { label: "Speaking", href: "/#speaking" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/#contact" },
 ];

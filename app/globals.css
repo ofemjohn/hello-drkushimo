@@ -22,6 +22,7 @@
 
   --font-display: var(--font-fraunces), "Fraunces", serif;
   --font-sans: var(--font-inter), "Inter", sans-serif;
+  --font-wordmark: var(--font-playfair), "Playfair Display", serif;
 
   --animate-fade-up: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-fade-in: fade-in 0.8s ease forwards;
