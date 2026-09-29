@@ -27,10 +27,30 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Locking scroll via `overflow: hidden` alone loses the scroll position on
+  // mobile (Safari in particular resets it to 0 once the lock lifts), which
+  // is why opening the menu away from the top of the page felt broken.
+  // Pinning the body at its current offset and restoring it on close avoids
+  // that jump.
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
+    if (!menuOpen) return;
+
+    const scrollY = window.scrollY;
+    const { body } = document;
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+
     return () => {
-      document.body.style.overflow = "";
+      body.style.position = "";
+      body.style.top = "";
+      body.style.left = "";
+      body.style.right = "";
+      // The site sets `scroll-behavior: smooth` globally, which also hijacks
+      // plain scrollTo(x, y) calls into an animated scroll — explicitly
+      // request "instant" here so the restore is an immediate jump.
+      window.scrollTo({ top: scrollY, left: 0, behavior: "instant" });
     };
   }, [menuOpen]);
 
